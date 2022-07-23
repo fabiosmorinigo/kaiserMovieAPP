@@ -1,0 +1,20 @@
+{
+  "name": "kaisermovieapp",
+  "version": "1.0.0",
+  "description": "Rest API consumption project with JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabiosmorinigo/kaiserMovieAPP.git"
+  },
+  "keywords": [],
+  "author": "Fabio Sosa <fabio_sosapy@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabiosmorinigo/kaiserMovieAPP/issues"
+  },
+  "homepage": "https://github.com/fabiosmorinigo/kaiserMovieAPP#readme"
+}

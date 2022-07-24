@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/fabiosmorinigo/kaiserMovieAPP/issues"
   },
-  "homepage": "https://github.com/fabiosmorinigo/kaiserMovieAPP#readme"
+  "homepage": "https://github.com/fabiosmorinigo/kaiserMovieAPP#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.1"
+  }
 }

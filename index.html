@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./src/sytles/app.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2392c0aa52.js" crossorigin="anonymous"></script>
     
     <title>KaiserMovies</title>
 </head>
@@ -16,11 +19,12 @@
 
     <header id="header" class="header-container">
         <span class="header-arrow inactive">&lt;</span>
-        <h1 class="header-title">KaiserMovies</h1>
+        <h1 class="header-title">KaiserMovies 🦊</h1>
+        <!-- <img src="./src/icons/androiKd-chrome-192x192.png" alt="logo" class="logo"> -->
         <h1 class="header-title header-title--categoryView inactive">Acción</h1>
     
         <form id="searchForm" class="header-searchForm">
-          <input type="text" placeholder="Vengadores" />
+          <input type="text" placeholder="Introducir nombre Pelicula" />
           <button id="searchBtn">🔍</button>
         </form>
       </header>
@@ -133,7 +137,16 @@
         </article>
       </section>
     
-      <footer>Developed by Fabio Sosa, add here my social</footer>
+      <footer>
+        <p>@fabiosmorinigo ⚡️</p>
+        <section class="footer__social">
+            <a href="https://github.com/fabiosmorinigo" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/fabiosmorinigo/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/fabiosmorinigo" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+            <a href="https://portfoliofabio.netlify.app/" target="_blank"><i class="fa-solid fa-blog"></i></a>
+            <a href="mailto:fabio_sosapy@outlook.com" target="_blank"><i class="fa-solid fa-at"></i></a>
+        </section>
+      </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/consumer.js"></script>

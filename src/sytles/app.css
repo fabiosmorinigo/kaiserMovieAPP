@@ -138,6 +138,7 @@ button {
 
 .header-title {
   margin-bottom: 16px;
+  display: inline-block;
 }
 
 .header-arrow {
@@ -342,13 +343,14 @@ button {
 
 /* Footer */
 footer {
-  background-color: var(--purple-medium-3);
+  background-color: #131414;
   color: var(--purple-light-2);
   text-align: center;
   height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: bolder;
 }
 
 
@@ -356,3 +358,10 @@ footer {
 .inactive {
   display: none;
 }
+
+/* social */
+
+a:visited {
+  color: white;
+}
+

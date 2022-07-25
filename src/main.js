@@ -8,7 +8,40 @@ const api = axios.create({
     }
 });
 
-function createMovies(movies, container) {
+
+const ip = axios.create({
+    baseURL: 'http://ip-api.com/json/',
+    Headers: {
+        'Content-Type': 'application/json',
+    },
+})
+
+window.addEventListener('load', getIP)
+
+async function getIP() {
+    const {data} = await ip();
+    const message = document.createElement('div');
+    footerIP.innerHTML = ''
+    message.innerHTML = 
+    `
+    <h2>Tu ubicacion es ${data.country} <sup>${data.countryCode}</sup> - ${data.regionName} region nº ${data.region} en la ciudad de ${data.city}. Tu proveedor de servicio es ${data.isp}. Gracias por visitar mi proyecto 😎</h2>
+    
+    `
+
+    footerIP.appendChild(message)
+}
+
+const lazyLoader = new IntersectionObserver((entries) => {
+    entries.forEach((entrie) => {
+        if(entrie.isIntersecting) {
+            const url = entrie.target.getAttribute('data-img')
+            entrie.target.setAttribute('src', url)
+        }
+    })
+});
+
+
+function createMovies(movies, container, lazyLoad = false) {
     container.innerHTML = '';
 
     movies.forEach(movie => {
@@ -23,10 +56,16 @@ function createMovies(movies, container) {
         movieIMG.classList.add('movie-img');
         movieIMG.setAttribute('alt', movie.title);
         movieIMG.setAttribute(
-            'src',
+            lazyLoad ? 'data-img' : 'src',
             'https://image.tmdb.org/t/p/w300' + movie.poster_path);
-        
-            document.body.scrollLeft = 0;
+            
+            movieIMG.addEventListener('error', () => {
+                movieIMG.setAttribute('src', 'https://images.pexels.com/photos/3747139/pexels-photo-3747139.jpeg?auto=compress')
+            });    
+        if(lazyLoad) {
+            lazyLoader.observe(movieIMG)
+        }
+        document.body.scrollLeft = 0;
         document.documentElement.scrollLeft = 0;
         movieContainer.appendChild(movieIMG);
         container.appendChild(movieContainer)
@@ -62,7 +101,7 @@ async function getTrendingMoviesPreview() {
 
     const movies = data.results;
 
-    createMovies(movies, trendingMoviesPreviewList)
+    createMovies(movies, trendingMoviesPreviewList, true)
 }
 
 
@@ -90,7 +129,7 @@ async function getMoviesByCategory(id) {
 
     const movies = data.results;
 
-    createMovies(movies, genericSection);
+    createMovies(movies, genericSection, true);
 }
 
 async function getMoviesBySearch(query) {

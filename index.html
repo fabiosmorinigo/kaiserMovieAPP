@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./src/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./src/sytles/app.css">
 
     <!-- Font Awesome -->
@@ -36,6 +37,9 @@
         </div>
     
         <article class="trendingPreview-movieList">
+          <div class="movie-container movie-container--loading"></div>
+          <div class="movie-container movie-container--loading"></div>
+          <div class="movie-container movie-container--loading"></div>
     
           <!-- <div class="movie-container">
             <img
@@ -52,6 +56,9 @@
         <h2 class="categoriesPreview-title">Categorías</h2>
     
         <article class="categoriesPreview-list">
+          <div class="category-container category-container--loading"></div>
+          <div class="category-container category-container--loading"></div>
+          <div class="category-container category-container--loading"></div>
           <!-- <div class="category-container">
             <h3 id="id28" class="category-title">Romance</h3>
           </div>
@@ -60,7 +67,11 @@
       </section>
     
       <section id="genericList" class="genericList-container inactive">
-        <div class="movie-container">
+        <div class="movie-container movie-container--loading"></div>
+        <div class="movie-container movie-container--loading"></div>
+        <div class="movie-container movie-container--loading"></div>
+        
+        <!-- <div class="movie-container">
           <img
             src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
             class="movie-img"
@@ -82,7 +93,7 @@
             class="movie-img"
             alt="Nombre de la película"
           />
-        </div>
+        </div> -->
       </section>
     
       <section id="movieDetail" class="movieDetail-container inactive">
@@ -111,7 +122,10 @@
     
           <div class="relatedMovies-scrollContainer">
             <div class="movie-container">
-              <img
+              <div class="movie-container movie-container--loading"></div>
+              <div class="movie-container movie-container--loading"></div>
+              <div class="movie-container movie-container--loading"></div>
+              <!-- <img
                 src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
                 class="movie-img"
                 alt="Nombre de la película"
@@ -132,19 +146,22 @@
                 class="movie-img"
                 alt="Nombre de la película"
               />
-            </div>
+            </div> -->
           </div>
         </article>
       </section>
     
       <footer>
-        <p>@fabiosmorinigo ⚡️</p>
+        <p class="nickname">@fabiosmorinigo ⚡️</p>
         <section class="footer__social">
             <a href="https://github.com/fabiosmorinigo" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.instagram.com/fabiosmorinigo/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://twitter.com/fabiosmorinigo" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
             <a href="https://portfoliofabio.netlify.app/" target="_blank"><i class="fa-solid fa-blog"></i></a>
             <a href="mailto:fabio_sosapy@outlook.com" target="_blank"><i class="fa-solid fa-at"></i></a>
+        </section>
+        <section id="ip">
+
         </section>
       </footer>
 

@@ -158,7 +158,7 @@ function getPageTrendingMovieByCategory(id) {
     return async function () {
      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
  
-     const scrollIsBottom = (scrollTop + clientHeight) >= (scrollHeight - 15);
+     const scrollIsBottom = (scrollTop + clientHeight) >= (scrollHeight - 50);
      const pageIsNotMax = page < maxPage;
  
      if(scrollIsBottom && pageIsNotMax) {
